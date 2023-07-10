@@ -18,6 +18,7 @@ import org.springframework.context.annotation.Configuration;
 public class ApiJobChildConfiguration {
     private final JobBuilderFactory jobBuilderFactory;
     private final StepBuilderFactory stepBuilderFactory;
+
     private final Step apiMasterStep; // 병렬 Partitioning
     private final JobLauncher jobLauncher;
 

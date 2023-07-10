@@ -9,7 +9,7 @@ import springbatch.utilize.batch.domain.dto.ApiResponseVO;
 @Service
 public class ApiService3 extends AbstractApiServices {
     @Override
-    protected ApiResponseVO doApiService(RestTemplate restTemplate, ApiInfo.ApiInfoBuilder apiInfo) {
+    protected ApiResponseVO doApiService(RestTemplate restTemplate, ApiInfo apiInfo) {
 
         ResponseEntity<String> response = restTemplate.postForEntity("http://localhost:8083/api/product/3", apiInfo, String.class);
 

@@ -47,6 +47,7 @@ public class ApiStepConfiguration {
 
     private final StepBuilderFactory stepBuilderFactory;
     private final DataSource dataSource;
+
     private final ApiService1 apiService1;
     private final ApiService2 apiService2;
     private final ApiService3 apiService3;

@@ -22,8 +22,10 @@ public class ApiJobConfiguration {
 
     private final JobBuilderFactory jobBuilderFactory;
     private final StepBuilderFactory stepBuilderFactory;
+
     private final ApiStartTasklet apiStartTasklet;
     private final ApiEndTasklet apiEndTasklet;
+
     private final Step jobStep;
 
     @Bean

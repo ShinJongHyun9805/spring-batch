@@ -25,6 +25,11 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-batch'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 
+	// webclient
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'io.projectreactor:reactor-core'
+	implementation 'org.springframework:spring-webflux'
+
 	// 멀티 스레드
 	implementation 'org.springframework.batch:spring-batch-integration'
 

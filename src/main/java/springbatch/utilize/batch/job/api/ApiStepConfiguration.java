@@ -21,9 +21,11 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import springbatch.utilize.batch.chunk.processor.ApiItemProcessor1;
 import springbatch.utilize.batch.chunk.processor.ApiItemProcessor2;
 import springbatch.utilize.batch.chunk.processor.ApiItemProcessor3;
+import springbatch.utilize.batch.chunk.processor.ApiItemProcessor4;
 import springbatch.utilize.batch.chunk.writer.ApiItemWriter1;
 import springbatch.utilize.batch.chunk.writer.ApiItemWriter2;
 import springbatch.utilize.batch.chunk.writer.ApiItemWriter3;
+import springbatch.utilize.batch.chunk.writer.ApiItemWriter4;
 import springbatch.utilize.batch.classifier.ProcessorClassifier;
 import springbatch.utilize.batch.classifier.WriterClassifier;
 import springbatch.utilize.batch.domain.dto.ApiRequestVO;
@@ -32,6 +34,7 @@ import springbatch.utilize.batch.partition.ProductPartitioner;
 import springbatch.utilize.service.ApiService1;
 import springbatch.utilize.service.ApiService2;
 import springbatch.utilize.service.ApiService3;
+import springbatch.utilize.service.ApiService4;
 
 import javax.sql.DataSource;
 import java.util.HashMap;
@@ -51,7 +54,7 @@ public class ApiStepConfiguration {
     private final ApiService1 apiService1;
     private final ApiService2 apiService2;
     private final ApiService3 apiService3;
-
+    private final ApiService4 apiService4;
 
     private final int chunkSize = 10;
 
@@ -130,6 +133,7 @@ public class ApiStepConfiguration {
         processorMap.put("1", new ApiItemProcessor1());
         processorMap.put("2", new ApiItemProcessor2());
         processorMap.put("3", new ApiItemProcessor3());
+        processorMap.put("4", new ApiItemProcessor4());
 
         classifier.setProcessorMap(processorMap);
 
@@ -149,6 +153,7 @@ public class ApiStepConfiguration {
         writerMap.put("1", new ApiItemWriter1(apiService1));
         writerMap.put("2", new ApiItemWriter2(apiService2));
         writerMap.put("3", new ApiItemWriter3(apiService3));
+        writerMap.put("4", new ApiItemWriter4(apiService4));
 
         classifier.setWriterMap(writerMap);
 
